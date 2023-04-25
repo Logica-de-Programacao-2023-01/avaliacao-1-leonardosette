@@ -20,22 +20,23 @@ func ProcessString(s string) string {
 
 	x := strings.Split(s, "")
 	i := 0
-	ewsslice := []string{}
+	newslice := []string{}
 	vogais := "aeiou"
 	for i < len(x) {
-		x[i]= strings.ToLower(x[i])
+		x[i] = strings.ToLower(x[i])
 		i++
 	}
 	i = 0
 	for _, c := range x {
-		If !strings.ContainsAny(c, vogais) {
+
+		if !strings.ContainsAny(c, vogais) {
 			newslice = append(newslice, c)
 
 		}
 	}
 	i = 0
 	new_s := ""
-	for i < len(newslice){
+	for i < len(newslice) {
 		new_s += "."
 		new_s += newslice[i]
 
