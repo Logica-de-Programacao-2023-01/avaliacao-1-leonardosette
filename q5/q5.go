@@ -1,9 +1,6 @@
 package q5
 
-import (
-	"fmt"
-	"strings"
-)
+import "strings"
 
 //Pedro começou a frequentar aulas de programação. Na primeira aula, sua tarefa foi escrever um programa simples. O
 //programa deveria fazer o seguinte: na sequência de caracteres fornecida, composta por letras latinas maiúsculas e
@@ -20,29 +17,29 @@ import (
 //Ajude Pedro a lidar com esta tarefa fácil.
 
 func ProcessString(s string) string {
-	var s string
 
-	fmt.Print("Digite uma sequência de caracteres")
-	fmt.Scanln(&s)
-
-	s = strings.Tolower(s)
-
-	newS := ""
-
-	for _, char = range s{
-		switch char {
-		case 'a','e','i','o','u'
-		continue
-		default:
-			newChar := string(char)
-			if char >='A' && char <= 'Z'{
-				newChar =
-					strings.ToLower(newChar)
-			}
+	x := strings.Split(s, "")
+	i := 0
+	ewsslice := []string{}
+	vogais := "aeiou"
+	for i < len(x) {
+		x[i]= strings.ToLower(x[i])
+		i++
+	}
+	i = 0
+	for _, c := range x {
+		If !strings.ContainsAny(c, vogais) {
+			newslice = append(newslice, c)
 
 		}
 	}
+	i = 0
+	new_s := ""
+	for i < len(newslice){
+		new_s += "."
+		new_s += newslice[i]
 
-
-	return ""
+		i++
+	}
+	return new_s
 }
