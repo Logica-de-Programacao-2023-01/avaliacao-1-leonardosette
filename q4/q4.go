@@ -13,14 +13,14 @@ import "fmt"
 
 func ClassifyPrices(prices []int) (int, error) {
 	n := len(prices)
-	if n ==0, {
+	if n == 0 {
 		return 0, fmt.Errorf("A lista está vazia")
-	} else if n ==1 {
+	} else if n == 1 {
 		return 3, nil
 	}
 	crescente := true
-	for i := 0; i < n-1; i++{
-		if prices[i] > prices[n]{
+	for i := 0; i < n-1; i++ {
+		if prices[i] > prices[n] {
 			crescente = false
 			break
 		}
@@ -29,8 +29,8 @@ func ClassifyPrices(prices []int) (int, error) {
 		return 1, nil
 	}
 	decrescente := true
-	for i := 0; i< n-1; i++{
-		if prices[i] < prices [i+1]{
+	for i := 0; i < n-1; i++ {
+		if prices[i] < prices[i+1] {
 			decrescente = false
 			break
 		}
@@ -38,8 +38,6 @@ func ClassifyPrices(prices []int) (int, error) {
 	if decrescente {
 		return 2, nil
 	}
-
-
 
 	return 3, nil
 }
